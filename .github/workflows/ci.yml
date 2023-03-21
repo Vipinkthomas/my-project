@@ -32,7 +32,12 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "picsyn" --password-stdin
-        docker image build -t picsyn/myproj:latest .
-        docker push dab8106/myproj:latest
+    -
+      name: Build and push
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: user/app:latest
+
 
          
