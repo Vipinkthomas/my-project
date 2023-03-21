@@ -37,4 +37,4 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         push: true
-        tags: picsyn/myproj:latest
+        tags: picsyn/docker101tutorial:latest
